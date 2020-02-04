@@ -364,6 +364,6 @@ z = out_df[['z']].values
 rad = out_df[['radius']].values
 
 src = mlab.pipeline.scalar_scatter(x, y, z, rad)
-pts = mlab.pipeline.glyph(src, scale_mode='none',scale_factor=.1)
+pts = mlab.pipeline.glyph(src, scale_mode='none',scale_factor=.1,colormap="winter")
 
 mlab.show()
