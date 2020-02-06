@@ -34,18 +34,3 @@ Choose bz to save
 It will create a file of k_points in that bz then load them as a pandas DataFrame 
  
 mayavi creates the visualisation
-~                                                                                                                                                                                    
-~                                                                                                                                                                                    
-~                                                                                                                                                                                    
-~                                                                                                                                                                                    
-~                                                                                                                                                                                    
-~                                                                                                                                                                                    
-~                                                                                                                                                                                    
-~                                                                                                                                                                                    
-~                                                                                                                                                                                    
-~                                                                                                                                                                                    
-~                                                                                                                                                                                    
-~                                                                                                                                                                                    
-~                                                                                                                                                                                    
-~                                                                                                                                                                                    
--- INSERT --
