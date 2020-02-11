@@ -63,7 +63,7 @@ print ('5-TRICLINIC')
 print ('6-HEXAGONAL')
 print ('7-TRIGONAL')
 print ()
-crys = int(input('Enter: '))
+crys = int(input('Enter (default 1): ') or '1')
 
 # Enter crystal type and associated parameters
 
@@ -71,36 +71,36 @@ ca=1.0
 ba=1.0
 if(crys==1):
     print ('P-1 I-2 F-3')
-    s = int(input('Enter: '))
+    s = int(input('Enter: (default 3) ') or '3')
 elif(crys==2):
     print ('P-1 I-2')
-    s = int(input('Enter: '))
-    ca = float(input('enter c/a '))
+    s = int(input('Enter: ') or '2')
+    ca = float(input('enter c/a (default 0.5) ') or '0.5')
 elif(crys==3):
     print ('P-1 I-2 F-3 C-4')
-    s = int(input('Enter: '))
-    ba = float(input('enter b/a '))
-    ca = float(input('enter c/a '))
+    s = int(input('Enter: (default 3) ') or '3')
+    ba = float(input('enter b/a (default 0.5) ') or '0.5')
+    ca = float(input('enter c/a (default 0.5) ') or 'o.5')
 elif(crys==4):
     print ('P-1 I-2-NOT CHECKED')
-    s = int(input('Enter: '))
-    ba = float(input('enter b/a '))
-    ca = float(input('enter c/a '))
+    s = int(input('Enter: (default 1) ') or '1')
+    ba = float(input('enter b/a (default 0.5) ') or '0.5')
+    ca = float(input('enter c/a (default 0.5) ') or '0.5')
     gamma = float(input('enter gamma angle between a anc b vectors '))
     gamma=gamma*PI/180.0
 elif(crys==5):
-    ba = float(input('enter b/a '))
-    ca = float(input('enter c/a '))
+    ba = float(input('enter b/a (default 0.5) ') or '0.5')
+    ca = float(input('enter c/a (default 0.5) ') or '0.5')
 
-    alpha = float(input('enter alpha angle between b anc c vectors '))
-    beta  = float(input('enter beta  angle between a anc c vectors '))
-    gamma = float(input('enter gamma angle between a anc b vectors '))
+    alpha = float(input('enter alpha angle between b anc c vectors (default 30) ') or '30')
+    beta  = float(input('enter beta  angle between a anc c vectors (default 30) ') or '30')
+    gamma = float(input('enter gamma angle between a anc b vectors (default 30) ') or '30')
 
     alpha=alpha*PI/180.0
     beta=beta*PI/180.0
     gamma=gamma*PI/180.0
 else:
-    ca = float(input('enter c/a '))
+    ca = float(input('enter c/a (default 0.5) ') or '0.5')
 
 print ()
 
@@ -324,7 +324,7 @@ print ()
 
 # set cutoff radius squared and generate Gvect
 
-GC = int(input('Enter Gcut^2  '))
+GC = int(input('Enter Gcut^2 (default 25)  ') or '25')
 
 # define reciprocal lattice spanning vectors
 
@@ -347,16 +347,16 @@ print("length G ",ll)
 
 # Define GRID based on parallel-piped based on b1,b2,b3
 
-m1 = int(input('enter how many multiples of G1 '))
-m2 = int(input('enter how many multiples of G2 '))
-m3 = int(input('enter how many multiples of G3 '))
-N1 = int(input('Enter number of grid points along 1 direction '))
-N2 = int(input('Enter number of grid points along 2 direction '))
-N3 = int(input('Enter number of grid points along 3 direction '))
+m1 = int(input('enter how many multiples of G1 (default 2) ') or '2')
+m2 = int(input('enter how many multiples of G2 (default 2) ') or '2')
+m3 = int(input('enter how many multiples of G3 (default 2) ') or '2')
+N1 = int(input('Enter number of grid points along 1 direction (default 300) ') or '300')
+N2 = int(input('Enter number of grid points along 2 direction (default 300) ') or '300')
+N3 = int(input('Enter number of grid points along 3 direction (default 300) ') or '300')
 
 # choose bz
 
-BZ = int(input('Enter BZ ')) 
+BZ = int(input('Enter BZ (default 16) ') or '16') 
 
 # open files to store BZ data
 
@@ -385,6 +385,8 @@ print(out_df.describe())
 # import visualisation library
 
 from mayavi import mlab
+
+mlab.figure(figure=None, bgcolor=(0.7,0.7,0.7), fgcolor=None, engine=None, size=(4000, 3500))
 
 x = out_df[['x']].values
 y = out_df[['y']].values
