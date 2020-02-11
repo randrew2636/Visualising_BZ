@@ -21,6 +21,8 @@ python BZ_ZONES_counting.py
         The code will check if the ws library ws.cpython-37m-darwin.so exits
         If not it runs f2py on bzones_lib_counting.f90 to create the library
 
+Enter parameters (there are defaults just hit enter):
+
 choose lattice type
 
 choose Gcut like 81
