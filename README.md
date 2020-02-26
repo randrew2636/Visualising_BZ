@@ -9,8 +9,7 @@ Need a python3 environment with numpy, pandas and for graphics install mayavi
 
 You also need gfortran to create the library to find k_points
 
-The python script will see if the ws library has been created
-Else it will run f2py to compile bzones_lib_counting.f90 to make the library
+The python script will run f2py to compile bzones_lib_counting.f90 to make the library
 
 # Running the code
 
@@ -18,8 +17,7 @@ export OMP_NUM_THREADS=8 or whatever for openMP
 
 python BZ_ZONES_counting.py
 
-        The code will check if the ws library ws.cpython-37m-darwin.so exits
-        If not it runs f2py on bzones_lib_counting.f90 to create the library
+        The code will run f2py on bzones_lib_counting.f90 to create the library
 
 Enter parameters (there are defaults just hit enter):
 

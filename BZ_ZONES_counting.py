@@ -10,8 +10,7 @@ import os
 # check to see if the fortran to python library exits
 # If not run f2py compiling thr openMP fortran file into a python library
 
-if (not os.path.exists('ws.cpython-37m-darwin.so')):
-    os.system("f2py3.7 -c -m ws bzones_lib_counting.f90 --f90flags=-fopenmp -lgomp")
+os.system("f2py3.7 -c -m ws bzones_lib_counting.f90 --f90flags=-fopenmp -lgomp")
 
 # Import this library 
 import ws
