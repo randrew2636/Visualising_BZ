@@ -377,7 +377,7 @@ print ('time: ','%E' %(t2-t1), 'sec')
 out_df = pd.read_csv("./BZ_ZONE.dat",header=None,delim_whitespace=True)
 os.system("rm -f BZ_ZONE.dat") # delete k-point datafile
 print('file read')
-out_df.columns = ['x','y','z','radius','count']
+out_df.columns = ['x','y','z','radius','BZ']
 print(out_df.head())
 
 print(out_df.describe())
