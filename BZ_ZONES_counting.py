@@ -1,4 +1,4 @@
-# Richard Andrew 2015
+# Richard Andrew 2020
 # 
 import numpy as np
 import pandas as pd
@@ -7,18 +7,19 @@ import time
 import os
 #--------------------------------------------------------
 
-# check to see if the fortran to python library exits
-# If not run f2py compiling thr openMP fortran file into a python library
+# Run f2py compiling the openMP fortran file into a python-callable library
 
 os.system("f2py3.7 -c -m ws bzones_lib_counting.f90 --f90flags=-fopenmp -lgomp")
 
-# Import this library 
+# Import this library
+
 import ws
 
-# NOTE 'ws.cpython-37m-darwin.so' is the library and 'ws' is the import name
+# NOTE 'ws.*.so' is the library and 'ws' is the import name
 
 #----------------------------------------------
 # Gvect generator function
+
 def gvect(gs,gcut,n):
     # define spanning vectors
     g = np.zeros(((n+2)*(n+2)*(n+2)*8*8*8,3))
