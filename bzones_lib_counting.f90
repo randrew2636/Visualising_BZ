@@ -48,5 +48,3 @@ enddo
 666 format(f20.3,1x,f20.3,1x,f20.3,1x,f20.3,1x,i3)
 
 end subroutine gen_kp
-
-
