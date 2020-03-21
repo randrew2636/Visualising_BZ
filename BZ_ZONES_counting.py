@@ -399,6 +399,7 @@ src = mlab.pipeline.scalar_scatter(x, y, z, rad)
 
 # plot points in a mayavi sceen window
 
-pts = mlab.pipeline.glyph(src, scale_mode='none',scale_factor=.1,colormap="winter")
+#pts = mlab.pipeline.glyph(src, scale_mode='none',scale_factor=.1,colormap="winter")
+pts = mlab.pipeline.glyph(src, scale_mode='none',scale_factor=.1,colormap="gray")
 
 mlab.show()
